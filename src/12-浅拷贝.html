@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>浅拷贝测试</title>
-    <script src="./declares.js"></script>
+    <!-- <script src="./declares.js"></script> -->
+    <script src="../dist/dgc-utils.js"></script>
 </head>
 <body>
     <script>
+        const {clone2} = aUtils;
+        // console.log('aUtils :>> ', aUtils);
         const obj = {x:'abc',y:{m:1}};
         const obj2 = [1,2,4,5]
         // const result1 = clone1(obj);

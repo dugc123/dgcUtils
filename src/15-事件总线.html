@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>事件总线测试</title>
-    <script src="./event-bus.js"></script>
+    <!-- <script src="./event-bus.js"></script> -->
+    <script src="../dist/dgc-utils.js"></script>
 </head>
 <body>
     <script>
+        const {eventBus} = aUtils;
         eventBus.on('login',data=>{
             console.log( data+"用户已经登录");
         })

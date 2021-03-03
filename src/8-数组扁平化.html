@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>数组扁平化测试</title>
-    <script src="./declares.js"></script>
+    <!-- <script src="./declares.js"></script> -->
+    <script src="../dist/dgc-utils.js"></script>
 </head>
 <body>
     <script>
+        const {flatten1,flatten2} = aUtils;
         //声明一个数组
         let arr = [1,2,[3,4,[5,6]],7,8];
         //数组扁平化

@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>数组API测试</title>
-    <script src="./declares.js"></script>
+    <!-- 方法中去掉export 用下一行引用方式 -->
+    <!-- <script src="./declares.js"></script> -->
+    <script src="../dist/dgc-utils.js"></script>
 </head>
 <body>
     <script>
+        const {unique1,unique2,map,reduce,filter,find,findIndex,every,some} = aUtils;
+
         //声明一个数组
         const arr=[0,0,1,2,2,4,3,4,996];
         //map函数调用
-        // const result = map(arr,(item,index)=>{
-        //     return item * 10;
-        // });
-        // console.log('result :>> ', result);
+        const result = map(arr,(item,index)=>{
+            return item * 10;
+        });
+        console.log('result :>> ', result);
         
         //reduce函数调用
         // let result = reduce(arr,(res,value)=>{

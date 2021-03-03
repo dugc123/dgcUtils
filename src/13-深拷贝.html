@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>深拷贝测试</title>
-    <script src="./declares.js"></script>
+    <!-- <script src="./declares.js"></script> -->
+    <script src="../dist/dgc-utils.js"></script>
 </head>
 <body>
     <script>
+        const {deepClone1,deepClone4} = aUtils;
         const obj = {
             a:1,
             b:['e','f','g'],

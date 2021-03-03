@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>消息订阅与发布</title>
-    <script src="./pub-sub.js"></script>
+    <!-- <script src="./pub-sub.js"></script> -->
+    <script src="../dist/dgc-utils.js"></script>
 </head>
 <body>
     <script>
+        const {PubSub} = aUtils;
         //订阅一个频道
         let pid1 = PubSub.subscribe('pay',data=>{
             console.log('商家接到了订单，准备开始制作',data);

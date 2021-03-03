@@ -5,14 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>发送ajax请求</title>
-    <script src="./axios函数封装.js"></script>
+    <!-- <script src="./axios函数封装.js"></script> -->
+    <script src="../dist/dgc-utils.js"></script>
 </head>
 <body>
     <script>
+        const {axios} = aUtils;
         axios({
             method:'POST',
             url:'http://rap2api.taobao.org/app/mock/244518/example/1581773983047',
-           
+            params:{
+                a:100,
+                b:200
+            },
+            data:{
+                c:300,
+                d:400
+            }
         }).then(res=>{
             console.log('res :>> ', res);
         }).catch(err=>{

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>事件绑定</title>
-    <script src="./declares.js"></script>
+    <!-- <script src="./declares.js"></script> -->
+    <script src="../dist/dgc-utils.js"></script>
 </head>
 <body>
     <ul id="items">
@@ -16,6 +17,7 @@
         <div>EEEE</div>
     </ul>
     <script>
+        const {addEventListener} = aUtils;
         //调用自定义函数绑定事件
         addEventListener('#items','click',function(e){
             console.log('this.innerHTML :>> ', this.innerHTML);
