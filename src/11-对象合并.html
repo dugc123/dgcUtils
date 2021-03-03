@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合并对象</title>
+    <script src="./declares.js"></script>
+</head>
+<body>
+    <script>
+        const object = {
+            a:[{x:2},{y:4}],
+            b:1
+        };
+        const other = {
+            a:{z:3},
+            b:[2,3],
+            c:"f00"
+        }
+        const result = mergeObject(object,other);
+        console.log('result :>> ', result);
+    </script>
+</body>
+</html>

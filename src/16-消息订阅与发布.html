@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消息订阅与发布</title>
+    <script src="./pub-sub.js"></script>
+</head>
+<body>
+    <script>
+        //订阅一个频道
+        let pid1 = PubSub.subscribe('pay',data=>{
+            console.log('商家接到了订单，准备开始制作',data);
+        })
+
+        let pid2 = PubSub.subscribe('pay',data=>{
+            console.log('骑手接到了订单，准备去取餐',data);
+        })
+
+        // let pid3 = PubSub.subscribe('cancel',data=>{
+        //     console.log('商家接到了取消请求',data);
+        // })
+        PubSub.unsubscribe(pid1)
+        //发布消息
+        PubSub.publish('pay',{
+            title:"鱼香肉丝",
+            price:20,
+            pos:"人民广场"
+        })
+        // console.log('PubSub :>> ', PubSub);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组API测试</title>
+    <script src="./declares.js"></script>
+</head>
+<body>
+    <script>
+        //声明一个数组
+        const arr=[0,0,1,2,2,4,3,4,996];
+        //map函数调用
+        // const result = map(arr,(item,index)=>{
+        //     return item * 10;
+        // });
+        // console.log('result :>> ', result);
+        
+        //reduce函数调用
+        // let result = reduce(arr,(res,value)=>{
+        //     return res + value;
+        // },0);
+        // console.log('result :>> ', result);
+
+        //filter函数调用
+        // const result = filter(arr,item=>item % 2 === 1);
+        // console.log('result :>> ', result);
+
+        //find
+        // const result = find(arr,(item,index)=>{
+        //     return item > 998;
+        // })
+        // console.log('result :>> ', result);
+
+
+        //findIndex
+        // const result = findIndex(arr,(item,index)=>{
+        //     return item > 999;
+        // })
+        // console.log('result :>> ', result);
+
+        //every
+        // const result = every(arr,(item)=>{
+        //     return item > 0;
+        // })
+        // console.log('every :>> ', result);
+
+        //some
+        // const result = some(arr,(item)=>{
+        //     return item > 999;
+        // })
+        // console.log('some :>> ', result);
+
+        //去重
+        const result1 = unique1(arr);
+        console.log('result1 :>> ', result1);
+        const result2 = unique2(arr);
+        console.log('result2 :>> ', result2);
+    </script>
+</body>
+</html>

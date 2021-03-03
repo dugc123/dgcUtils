@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件总线测试</title>
+    <script src="./event-bus.js"></script>
+</head>
+<body>
+    <script>
+        eventBus.on('login',data=>{
+            console.log( data+"用户已经登录");
+        })
+
+        eventBus.on('login',data=>{
+            console.log( data+"登录数据已经写入");
+        })
+
+        eventBus.on('logout',data=>{
+            console.log( data+"用户退出登录");
+        })
+        console.log('eventBus :>> ', eventBus);
+        //触发事件
+        // setTimeout(() => {
+        //     eventBus.emit('login','张三')
+        // }, 2000);
+
+        //解绑事件
+        eventBus.off('login');
+    </script>
+</body>
+</html>

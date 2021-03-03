@@ -1,0 +1,17 @@
+{
+  "name": "dgc-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/dgc-utils",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:watch":"webpack --watch"
+  },
+  "keywords": ["utils","dgc"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  }
+}

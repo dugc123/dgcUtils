@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发送ajax请求</title>
+    <script src="./axios函数封装.js"></script>
+</head>
+<body>
+    <script>
+        axios({
+            method:'POST',
+            url:'http://rap2api.taobao.org/app/mock/244518/example/1581773983047',
+           
+        }).then(res=>{
+            console.log('res :>> ', res);
+        }).catch(err=>{
+            console.log('err :>> ', err);
+        })
+    </script>
+</body>
+</html>
