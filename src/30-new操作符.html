@@ -1,0 +1,34 @@
+<!--
+ * @Desc: 手写new操作符
+    在调用new的过程中发生了四件事：
+        1.首先创建了一个空对象。
+        2.将空对象proto指向构造函数的原型prototype。
+        3.使this指向新创建的对象，并执行构造函数。
+        4.执行结果有返回值并且是一个对象， 返回执行的结果， 否则返回新创建的对象。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    function One(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    function myNew(fn, ...args) {
+        let obj = {}; //创建新对象
+        obj.__proto__ = fn.prototype; //将新对象的原型proto指向构造函数的prototype
+        let res = fn.apply(obj, args); //将this指向新对象，并且执行构造函数
+        return res instanceof Object ? res : obj; //执行结果有返回值并且是一个对象，返回执行的结果，否则返回新创建的对象
+    }
+    let person = myNew(One, '张三', 14);
+    console.log('person', person)
+</script>
+</html>

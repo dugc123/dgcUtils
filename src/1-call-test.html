@@ -10,18 +10,33 @@
 <body>
     <script>
         //声明一个函数
-        function add(a,b){
+        function add(a, b) {
             return a + b + this.c;
         }
         //声明一个对象
         let obj = {
-            c:521
+            c: 521
         };
         //添加全局属性
         window.c = 1314;
         //执行call函数
-        console.log('call(add,obj,10,20) ', call(add,obj,10,20));
-        console.log('call(add,null,10,20) ', call(add,null,10,20));
+        console.log('call(add,obj,10,20) ', call(add, obj, 10, 20));
+        console.log('call(add,null,10,20) ', call(add, null, 10, 20));
+
+        // 测试
+        var value = 2;
+        var obj1 = {
+            value: 1,
+        };
+        function bar(name, age) {
+            var myObj = {
+                name: name,
+                age: age,
+                value: this.value,
+            };
+            console.log(this.value, myObj);
+        }
+        bar.my_call(obj1, "tom", "110"); // 打印 1 {name: "tom", age: "110", value: 1}
     </script>
 </body>
 </html>
