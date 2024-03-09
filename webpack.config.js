@@ -1,4 +1,5 @@
 const path = require("path");
+const ZipPlugin = require("./src/zipPlugin ");
 
 module.exports = {
     mode:"development",
@@ -10,5 +11,10 @@ module.exports = {
         library:'dUtils',
         //打包生成库可以通过esm/commonjs/requirejs的语法引入
         libraryTarget:"umd"
-    }
+    },
+    plugins:[
+        new ZipPlugin({
+            filename: 'dgc-utils.zip'
+        })
+    ]
 }

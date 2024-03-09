@@ -31,3 +31,19 @@ Function.prototype.my_call = function (context, ...args) {
     // 执行函数并返回结果 相当于把自身作为传入的context的方法进行调用了
     return context[fn](...args);
 };
+
+
+Function.prototype.my_call2 = function (context) {
+    if (!context || context === null) {
+        context = window;
+    }
+    
+    //临时挂载
+    context.fn = this;
+    // let args = [...arguments];
+    // args.shift();
+    let result = arguments[1]
+                    ? context.fn(...arguments[1])
+                    : context.fn();
+    return result;
+};
